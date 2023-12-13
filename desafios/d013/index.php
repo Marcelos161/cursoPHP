@@ -25,10 +25,22 @@
     <section>
 
         <?php 
-            $valor = number_format($valor, 2, ",", ".");
-            echo "<h2>Saque de R$$valor Realizado</h2>";
+            $valorFormatado = number_format($valor, 2, ",", ".");
+            echo "<h2>Saque de R$$valorFormatado Realizado</h2>";
 
-            echo "O caixa eletronico vai te entrega as seguintes notas:";
+            echo "O caixa eletronico vai te entregar as seguintes notas:";
+
+            $QtNota100 = intval($valor / 100);
+            $resto = $valor % 100;
+
+            $QtNota50 = intval($resto / 50);
+            $resto = $resto % 50;
+
+            $QtNota10 = intval($resto / 10);
+            $resto = $resto % 10;
+
+            $QtNota5 = $resto / 5;
+
 
             echo "<ul>
             <li>nota de 100 x$QtNota100</li>
