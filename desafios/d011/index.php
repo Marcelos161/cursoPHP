@@ -16,7 +16,7 @@
         <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
             <label for="precoProduto">Preço do Produto(R$)</label>
             <input type="number" step="any" name="precoProduto" value="<?=$precoProduto?>">
-            <label for="percentual" id="labelPercentual">Qual sera o percentual do reajuste? <strong id="valorPercentual"></strong></label>
+            <label for="percentual" id="labelPercentual">Qual sera o percentual do reajuste? <strong id="valorPercentual">?%</strong></label>
             <input type="range" name="percentual" id="percentual" value="<?=$percentual?>">
             <input type="submit" value="Reajustar">
         </form>
